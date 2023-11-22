@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Shop</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <nav class="navbar">
+        <!-- logo start -->
+        <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+        <!-- logo end  -->
+        <!-- Menu Start -->
+        <ul class="nav">
+            <li class="item"><a href="lugx.html">Home</a></li>
+            <li class="item"><a href="our shops.html" class="active">Our Shop</a></li>
+            <li class="item"><a href="http://127.0.0.1:5500/somebestglimpse.html">Most Sellings</a></li>
+            <li class="item"><a href="product.html">Product Details</a></li>
+            <li class="item"><a href="http://127.0.0.1:5500/formgym.html">Contact Us</a></li>
+            <li class="item" ><button><a href="#" id="signin">SIGN IN</a></button></li>
+        </ul>
+        <!-- Menu End  -->
+    </nav>
+    <!-- navbar end  -->
+    <!-- Header Start  -->
+    <header class="header">
+       
+        <!-- OUR SHOP  -->
+        <span class="header-text">
+            <h1>OUR SHOPS</h1>
+            <p><a href="http://127.0.0.1:5500/lugx.html">Home</a> > Our Shop </p>
+         </span>
+    </header>
+    <!-- Header end  -->
+    <section>
+        <ul class="category">
+            <li class="category-item1"><a href="" id="visible">SHOW ALL</a></li>
+            <li class="category-item2"><a href="#">ADVENTURE</a></li>
+            <li class="category-item3"><a href="#">STRATEGY</a></li>
+            <li class="category-item4"><a href="#">RACING</a></li>
+        </ul>
+        <div class="images">
+            <div class="sub-image" id="image">
+                <div class="box1">
+                <div class="box"><a href=""><img src="images/top-game-01.jpg" alt="" class="image1"></a>
+                    <div class="price"><p><s>$36</s><br><b>$24</b></p></div>
+                    <div class="description"><h3>Action</h3><h1>Assian Creed</h1></div>
+                    <div class="cart-icon"><img src="images/bag-shopping-white.svg" alt="" width="25px"></div>
+                </div>
+                <div class="box"><a href=""><img src="images/top-game-02.jpg" alt="" class="image2"></a>
+                    <div class="price"><p><s>$36</s><br><b>$24</b></p></div>
+                    <div class="description"><h3>Action</h3><h1>Assian Creed</h1></div>
+                    <div class="cart-icon"><img src="images/bag-shopping-white.svg" alt="" width="25px"></div>
+                </div>
+                <div class="box"><a href=""><img src="images/top-game-03.jpg" alt="" class="image3"></a>
+                    <div class="price"><p><s>$36</s><br><b>$24</b></p></div>
+                    <div class="description"><h3>Action</h3><h1>Assian Creed</h1></div>
+                    <div class="cart-icon"><img src="images/bag-shopping-white.svg" alt="" width="25px"></div>
+                </div>
+                <div class="box"><a href=""><img src="images/top-game-04.jpg" alt="" class="image4"></a>
+                    <div class="price"><p><s>$36</s><br><b>$24</b></p></div>
+                    <div class="description"><h3>Action</h3><h1>Assian Creed</h1></div>
+                    <div class="cart-icon"><img src="images/bag-shopping-white.svg" alt="" width="25px"></div>
+                </div>
+                </div>
+                <div class="box2">
+                <div class="box"><a href=""><img src="images/top-game-05.jpg" alt="" class="image5"></a>
+                    <div class="price"><p><s>$36</s><br><b>$24</b></p></div>
+                    <div class="description"><h3>Action</h3><h1>Assian Creed</h1></div>
+                    <div class="cart-icon"><img src="images/bag-shopping-white.svg" alt="" width="25px"></div>
+                </div>
+                <div class="box"><a href=""><img src="images/categories-01.jpg" alt="" class="image6"></a>
+                    <div class="price"><p><s>$36</s><br><b>$24</b></p></div>
+                    <div class="description"><h3>Action</h3><h1>Assian Creed</h1></div>
+                    <div class="cart-icon"><img src="images/bag-shopping-white.svg" alt="" width="25px"></div>
+                </div>
+                <div class="box"><a href=""><img src="images/top-game-05.jpg" alt="" class="image7"></a>
+                    <div class="price"><p><s>$36</s><br><b>$24</b></p></div>
+                    <div class="description"><h3>Action</h3><h1>Assian Creed</h1></div>
+                    <div class="cart-icon"><img src="images/bag-shopping-white.svg" alt="" width="25px"></div>
+                </div>
+                <div class="box"><a href=""><img src="images/top-game-04.jpg" alt="" class="image8"></a>
+                    <div class="price"><p><s>$36</s><br><b>$24</b></p></div>
+                    <div class="description"><h3>Action</h3><h1>Assian Creed</h1></div>
+                    <div class="cart-icon"><img src="images/bag-shopping-white.svg" alt="" width="25px"></div>
+                </div>
+                </div>
+                <div class="box3">
+                <div class="box"><a href=""><img src="images/categories-02.jpg" alt="" class="image9"></a>
+                    <div class="price"><p><s>$36</s><br><b>$24</b></p></div>
+                    <div class="description"><h3>Action</h3><h1>Assian Creed</h1></div>
+                    <div class="cart-icon"><img src="images/bag-shopping-white.svg" alt="" width="25px"></div>
+                </div>
+                <div class="box"><a href=""><img src="images/top-game-02.jpg" alt="" class="image10"></a>
+                    <div class="price"><p><s>$36</s><br><b>$24</b></p></div>
+                    <div class="description"><h3>Action</h3><h1>Assian Creed</h1></div>
+                    <div class="cart-icon"><img src="images/bag-shopping-white.svg" alt="" width="25px"></div>
+                </div>
+                <div class="box"><a href=""><img src="images/top-game-01.jpg" alt="" class="image11"></a>
+                    <div class="price"><p><s>$36</s><br><b>$24</b></p></div>
+                    <div class="description"><h3>Action</h3><h1>Assian Creed</h1></div>
+                    <div class="cart-icon"><img src="images/bag-shopping-white.svg" alt="" width="25px"></div>
+                </div>
+                <div class="box"><a href=""><img src="images/top-game-03.jpg" alt="" class="image12"></a>
+                    <div class="price"><p><s>$36</s><br><b>$24</b></p></div>
+                    <div class="description"><h3>Action</h3><h1>Assian Creed</h1></div>
+                    <div class="cart-icon"><img src="images/bag-shopping-white.svg" alt="" width="25px"></div>
+                </div>
+                </div>
+        
+            </div>
+        </div>
+    </section>
+    <!-- page Button  -->
+    <div class="page-btn">
+        <a href="#"> < </a> <a href="#">1</a><a href="#" id="active-page">2</a><a href="#">3</a> <a href="#">></a>    
+    </div>
+    <!-- footer  -->
+    <div class="footer">
+        <p>Copyright © 2048 LUGX Gaming Company. All rights reserved.    Design: TemplateMo</p>
+    </div>
+</body>
+</html>
