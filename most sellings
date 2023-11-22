@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Most Selling Games</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 5%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+}
+
+.logo{
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.social{
+    margin: 0 auto 0 50px;
+}
+
+.social a{
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.social a:hover{
+    background: #fff;
+}
+
+.social a i{
+    display: flex;
+    font-size: 25px;
+    color: #fff;
+    padding-top: 6px;
+    transition: all 0.5s ease;
+}
+
+.social a:hover i{
+    color: #444;
+}
+
+.navbar a{
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.slider .slide{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+.slide img{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.slide.active img{
+    opacity: 1;
+}
+
+.slide .left-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: 0s;
+}
+
+.slide.active .left-info{
+    transform: translateX(0);
+    z-index: 1;
+    transition: 1s ease;
+}
+
+.left-info .penetrte-blur{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.penetrte-blur h1{
+    font-size: 200px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 5);
+}
+
+.left-info .content{
+    position: absolute;
+    bottom: 8%;
+    left: 10%;
+    color: #fff;
+}
+
+.content h3{
+    font-size: 20px;
+}
+
+.content p{
+    font-size: 16px;
+    margin: 10px 0 1.5rem;
+}
+
+.content .btn{
+    display: inline-block;
+    padding: 1.3rem 2.8rem;
+    background: #072aee;
+    border: 2px solid white;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.6rem;
+    color: #fffefe;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+.content .btn:hover{
+    background: transparent;
+    color: #fff;
+}
+
+.slide .right-info{
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    width: 50%;
+    height: 100%;
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: 0s;
+}
+
+.slide.active .right-info{
+    transform: translateX(0);
+    z-index: 1;
+    transition: 1s ease;
+}
+
+.right-info h1{
+    font-size: 200px;
+    color: #fff;
+    text-shadow: 
+        0 1px 0 #ccc,
+        0 2px 0 #c9c9c9,
+        0 3px 0 #bbb,
+        0 4px 0 #b9b9b9,
+        0 5px 0 #aaa,  
+        0 6px 1px rgba(0, 0, 0, 0.1),  
+        0 0px 5px rgba(0, 0, 0, 0.1),  
+        0 1px 3px rgba(0, 0, 0, 0.3),  
+        0 3px 5px rgba(0, 0, 0, 0.2),  
+        0 5px 10px rgba(0, 0, 0, 0.25),  
+        0 10px 10px rgba(0, 0, 0, 0.2),  
+        0 20px 20px rgba(0, 0, 0, 0.15),  
+        ;
+}
+
+.right-info h3{
+    position: absolute;
+    font-size: 65px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(190%);
+    margin-left: 1.3rem;
+}
+
+.navigation{
+    position: absolute;
+    bottom: 8%;
+    right: 5%;
+    z-index: 99;
+}
+
+.navigation span{
+    display: inline-flex;
+    width: 5rem;
+    height: 5rem;
+    background: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    margin-left: 2.5rem;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation span:nth-child(1){
+    background: transparent;
+}
+
+.navigation span:nth-child(1):hover{
+    background: #fff;
+}
+
+.navigation span i{
+    color: #444;
+    transition: all .5s ease;
+}
+
+.navigation span:nth-child(1) i{
+    color: #fff;
+}
+
+.navigation span:nth-child(1):hover i{
+    color: #444;
+}
+.right-info h3{
+    color: rgb(238, 125, 125);
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    
+      <section class="banner">
+        <div class="slider">
+            <div class="slide active">
+                <img src="./1.jpg" alt="">
+                <div class="left-info">
+                    <div class="penetrte-blur">
+                        <h1>DOOM E</h1>
+                    </div>
+                    <div class="content">
+                        <h3>00. DOOM ETERNAL</h3>
+                        <p>"Doom Eternal" is a high-octane first-person shooter developed by id Software and published by Bethesda Softworks. Serving as a direct sequel to the 2016 reboot of the classic "Doom" franchise, this game puts players back in the shoes of the iconic Doom Slayer, a powerful warrior fighting against the forces of Hell.</p>
+                        <a href="#" class="btn">More Details</a>
+                        
+                        <a href="http://127.0.0.1:5500/lugx.html" class="btn">Home Page</a>
+                    </div>
+                </div>
+                <div class="right-info">
+                    <h1>TERNAL</h1>
+                    <h3>LUGX</h3>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="./10.jpeg" alt="">
+                <div class="left-info">
+                    <div class="penetrte-blur">
+                        <h1>GOD O</h1>
+                    </div>
+                    <div class="content">
+                        <h3>01. GOD OF WAR</h3>
+                        <p>"God of War" is an action-adventure video game developed by Santa Monica Studio and published by Sony Interactive Entertainment. Released in 2018, it serves as a soft reboot of the iconic "God of War" series. The game follows Kratos, a former Greek god now living in the realm of Norse mythology, along with his young son Atreus.</p>
+                        <a href="#" class="btn">More Details</a>
+                        <a href="http://127.0.0.1:5500/lugx.html" class="btn">Home Page</a>
+                    </div>
+                </div>
+                <div class="right-info">
+                    <h1>F WAR</h1>
+                    <h3>LUGX</h3>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="./9.jpg" alt="">
+                <div class="left-info">
+                    <div class="penetrte-blur">
+                        <h1>APEX L</h1>
+                    </div>
+                    <div class="content">
+                        <h3>02. APEX LEGENDS</h3>
+                        <p>Apex Legends" is a free-to-play battle royale game developed by Respawn Entertainment and published by Electronic Arts. Set in the Titanfall universe, it's a fast-paced, team-based shooter that has gained immense popularity since its release in 2019. In "Apex Legends," players are dropped onto a vibrant island and form squads of three. Each player selects a unique legend, or character, each with their own special abilities, allowing for diverse tactical approaches.</p>
+                        <a href="#" class="btn">More Details</a>
+                        <a href="http://127.0.0.1:5500/lugx.html" class="btn">Home Page</a>
+                    </div>
+                </div>
+                <div class="right-info">
+                    <h1>EGENDS</h1>
+                    <h3>LUGX
+
+                    </h3>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="./4.jpg" alt="">
+                <div class="left-info">
+                    <div class="penetrte-blur">
+                        <h1>Wolfen</h1>
+                    </div>
+                    <div class="content">
+                        <h3>03. "Wolfenstein II: The New Colossus"</h3>
+                        <p>"Wolfenstein II: The New Colossus" is an action-packed first-person shooter video game developed by MachineGames and published by Bethesda Softworks. Released in 2017, it is the sequel to "Wolfenstein: The New Order."
+
+                            Set in an alternate history where the Nazis have won World War II and now rule over America, players assume the role of B.J. Blazkowicz, a resistance fighter battling against the oppressive regime. The game combines intense gunplay with a rich narrative, exploring themes of resistance, sacrifice, and the fight for freedom.</p>
+                        <a href="#" class="btn">More Details</a>
+                        <a href="http://127.0.0.1:5500/lugx.html" class="btn">Home Page</a>
+                    </div>
+                </div>
+                <div class="right-info">
+                    <h1>stein II</h1>
+                    <h3>LUGX</h3>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="./8.jpg" alt="">
+                <div class="left-info">
+                    <div class="penetrte-blur">
+                        <h1>MAFIA </h1>
+                    </div>
+                    <div class="content">
+                        <h3>04. Mafia Series</h3>
+                        <p>The games typically feature compelling narratives, richly detailed environments, and a mix of action, driving, and strategic gameplay. Players step into the shoes of protagonists involved in criminal activities, facing challenges ranging from turf wars to police pursuits.
+
+                            Each installment in the series introduces a new setting and a fresh cast of characters, allowing players to explore different facets of organized crime. From the 1930s to the 1960s and beyond, the games offer a cinematic experience with period-authentic details.</p>
+                        <a href="#" class="btn">More Details</a>
+                        <a href="http://127.0.0.1:5500/lugx.html" class="btn">Home Page</a>
+                    </div>
+                </div>
+                <div class="right-info">
+                    <h1> SERIES</h1>
+                    <h3>LUGX</h3>
+                </div>
+            </div>
+
+            
+            </div>
+        </div>
+
+        <div class="navigation">
+            <span class="prev-btn"><i class="fa-solid fa-chevron-left fa-3x"></i></span>
+            <span class="next-btn"><i class="fa-solid fa-chevron-right fa-3x"></i></span>
+        </div>
+    </section>
+    <script>
+        const nxtBtn = document.querySelector(".next-btn");
+const prvBtn = document.querySelector(".prev-btn");
+const slides = document.querySelectorAll(".slide");
+const numberOfSlides = slides.length;
+let slideNumber= 0;
+
+
+// slider next button
+nxtBtn.onclick = () =>{
+    slides.forEach((slide) => {
+        slide.classList.remove('active');
+    });
+
+    slideNumber++;
+
+    if(slideNumber > (numberOfSlides-1)){
+        slideNumber = 0;
+    }
+
+    slides[slideNumber].classList.add('active');
+}
+
+
+// slider Prev button
+prvBtn.onclick = () =>{
+    slides.forEach((slide) => {
+        slide.classList.remove('active');
+    });
+
+    slideNumber--;
+
+    if(slideNumber < 0 ){
+        slideNumber = numberOfSlides - 1;
+    }
+
+    slides[slideNumber].classList.add('active');
+}
+    </script>
+</body>
+</html>
