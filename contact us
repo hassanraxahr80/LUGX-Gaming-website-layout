@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lugx Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(252, 245, 245,.5);
+            background-image:linear-gradient(rgba(0, 0, 0,0.5),rgba(7, 7, 7, 0.5)
+        ), url(banner-image.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 1000px;
+        }
+        .container {
+            margin: 150px;
+            width: 90%;
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 70px;
+          border-radius: 30px;
+          background: rgb(107, 107, 218, 0.5);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            color: rgb(253, 253, 252);
+        }
+        .form-heading {
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-radius: 30px;
+        }
+        .form-field {
+            margin-bottom: 15px;
+            border-radius: 30px;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            border-radius: 30px;
+        }
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            border-radius: 4px;
+            color: rgb(96, 57, 240);
+        }
+        .form-submit {
+            padding: 10px 15px;
+            background-color: rgb(252, 139, 139);
+            color: rgb(253, 251, 251);
+            border: none;
+            border-radius: 30px;
+            border-radius: 4px;
+            cursor: pointer;
+           
+        }
+        .ab{
+            border-radius: 30px;
+            font-size: 130%;
+            color: rgb(253, 253, 251);
+            margin: auto;
+            width: 900px;
+            padding-top: 20px;
+            text-align: center;
+        }
+        .ab a{
+            color: rgb(253, 252, 250);
+            text-decoration: none;
+            border-radius: 30px;
+        }
+        .gg{
+            margin-top: 100px;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gg">
+    <div class="container">
+        <h2 class="form-heading">Contact Us</h2>
+        <form action="submit.php" method="POST">
+            <div class="form-field">
+                <label class="form-label" for="name">Name:</label>
+                <input class="form-input" type="text" id="name" name="name" required>
+            </div>
+            <div class="form-field">
+                <label class="form-label" for="email">Email:</label>
+                <input class="form-input" type="email" id="email" name="email" required>
+            </div>
+            <div class="form-field">
+                <label class="form-label" for="phone">Phone:</label>
+                <input class="form-input" type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-field">
+                <label class="form-label" for="membership">Membership Type:</label>
+                <select class="form-input" id="membership" name="membership">
+                    <option value="standard">Standard</option>
+                    <option value="premium">Premium</option>
+                    <option value="deluxe">Deluxe</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label class="form-label" for="goal">Your Queries</label>
+                <textarea class="form-input" id="goal" name="goal" rows="4" required></textarea>
+            </div>
+            <input class="form-submit" type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="ab">
+        <a href="http://127.0.0.1:5500/lugx.html"> Go To Home Page</a>
+    </div>
+</div>
+</body>
+</html>
